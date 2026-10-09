@@ -1,0 +1,240 @@
+:root {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color-scheme: light;
+  --sky-30: rgba(56, 189, 248, 0.30);
+  --sky-glow: 0 0 20px rgba(56, 189, 248, 0.30);
+  --sky-border: 1.5px solid rgba(56, 189, 248, 0.30);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #0f172a;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbars in Light Sky Blue */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(240, 249, 255, 0.7);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(56, 189, 248, 0.35);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(56, 189, 248, 0.65);
+}
+
+/* Glassmorphism Cards: Crisp White with Light Sky Shining Blue 30% Opacity */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.90);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1.5px solid rgba(56, 189, 248, 0.30);
+  box-shadow: 0 8px 30px 0 rgba(56, 189, 248, 0.16), 0 0 15px rgba(56, 189, 248, 0.22);
+}
+
+.glass-panel-hover {
+  transition: all 0.2s ease-in-out;
+}
+
+.glass-panel-hover:hover {
+  border-color: rgba(56, 189, 248, 0.60);
+  box-shadow: 0 10px 35px 0 rgba(56, 189, 248, 0.28), 0 0 25px rgba(56, 189, 248, 0.35);
+  transform: translateY(-1px);
+}
+
+/* Shining Light Sky Blue Utilities */
+.shining-sky-border {
+  border: 1.5px solid rgba(56, 189, 248, 0.30) !important;
+}
+
+.shining-sky-glow {
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.30), 0 4px 15px rgba(56, 189, 248, 0.15) !important;
+}
+
+.shining-sky-badge {
+  background: rgba(56, 189, 248, 0.12) !important;
+  border: 1px solid rgba(56, 189, 248, 0.30) !important;
+  color: #0284c7 !important;
+}
+
+/* Glowing Pulse Effect for Critical Incidents */
+@keyframes pulse-red-glow {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(239, 68, 68, 0.5), inset 0 0 4px rgba(239, 68, 68, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.9), inset 0 0 10px rgba(239, 68, 68, 0.5);
+  }
+}
+
+.critical-pulse {
+  animation: pulse-red-glow 2s infinite ease-in-out;
+}
+
+@keyframes pulse-amber-glow {
+  0%, 100% {
+    box-shadow: 0 0 6px rgba(245, 158, 11, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 16px rgba(245, 158, 11, 0.8);
+  }
+}
+
+.amber-pulse {
+  animation: pulse-amber-glow 2.5s infinite ease-in-out;
+}
+
+/* Leaflet Map Light Mode with Shining Sky Blue Borders */
+.leaflet-container {
+  background: #f1f5f9 !important;
+  font-family: 'Inter', sans-serif !important;
+}
+
+/* Daylight High-Resolution Tiles (Clean, vibrant) */
+.dark-tiles .leaflet-tile {
+  filter: saturate(1.05) contrast(1.02) !important;
+}
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border: 1.5px solid rgba(56, 189, 248, 0.30) !important;
+  box-shadow: 0 10px 30px rgba(56, 189, 248, 0.25), 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+  border-radius: 12px !important;
+}
+
+.leaflet-popup-content {
+  margin: 12px 16px !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+  color: #0f172a !important;
+}
+
+/* AI Pill Badge Styling */
+.ai-badge {
+  background: linear-gradient(135deg, rgba(224, 242, 254, 0.40) 0%, rgba(240, 249, 255, 0.60) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.30);
+  color: #0369a1;
+}
+
+/* Grid Pattern: Clean White Canvas with Shining Sky Dots */
+.bg-grid-pattern {
+  background-color: #f8fafc;
+  background-image: radial-gradient(rgba(56, 189, 248, 0.22) 1.2px, transparent 1.2px);
+  background-size: 24px 24px;
+}
+
+/* ==========================================================
+   THEME ADAPTATION: White & Light Sky Blue 30% Opacity
+   Transforms dark background utilities into clean light sky
+   ========================================================== */
+
+/* Dark background overrides to White & Light Sky Blue 30% */
+.bg-slate-950 {
+  background-color: #ffffff !important;
+}
+
+.bg-slate-950\/90,
+.bg-slate-950\/85,
+.bg-slate-950\/80,
+.bg-slate-950\/70,
+.bg-slate-950\/60,
+.bg-slate-950\/50 {
+  background-color: rgba(240, 249, 255, 0.55) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+}
+
+.bg-slate-900 {
+  background-color: #ffffff !important;
+}
+
+.bg-slate-900\/95,
+.bg-slate-900\/90,
+.bg-slate-900\/80,
+.bg-slate-900\/70 {
+  background-color: rgba(255, 255, 255, 0.92) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+}
+
+.bg-slate-800 {
+  background-color: rgba(224, 242, 254, 0.40) !important;
+}
+
+.bg-slate-800\/80,
+.bg-slate-800\/60,
+.bg-slate-800\/50,
+.bg-slate-800\/40 {
+  background-color: rgba(224, 242, 254, 0.30) !important;
+}
+
+/* Border overrides to Light Sky Blue with 30% Opacity */
+.border-slate-800,
+.border-slate-800\/80,
+.border-slate-800\/60,
+.border-slate-800\/50,
+.border-slate-700,
+.border-slate-700\/80,
+.border-slate-700\/60,
+.border-slate-900 {
+  border-color: rgba(56, 189, 248, 0.30) !important;
+}
+
+/* Text readability enhancements on light sky surfaces */
+.text-slate-100 {
+  color: #0f172a !important;
+}
+
+.text-slate-200 {
+  color: #1e293b !important;
+}
+
+.text-slate-300 {
+  color: #334155 !important;
+}
+
+.text-slate-400 {
+  color: #475569 !important;
+}
+
+.text-slate-500 {
+  color: #64748b !important;
+}
+
+/* Form input, select, and textarea styling */
+input, select, textarea {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border: 1px solid rgba(56, 189, 248, 0.30) !important;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: rgba(14, 165, 233, 0.70) !important;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.30) !important;
+  outline: none !important;
+}
+
+/* Modal Backdrops: Soft blurred tint */
+.fixed.inset-0.bg-slate-950\/85,
+.fixed.inset-0.bg-slate-950\/80 {
+  background-color: rgba(15, 23, 42, 0.35) !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+/* Soft card shadow with shining light sky blue glow */
+.card-sky-shine {
+  box-shadow: 0 4px 20px rgba(56, 189, 248, 0.18), 0 0 15px rgba(56, 189, 248, 0.22);
+  border: 1.5px solid rgba(56, 189, 248, 0.30);
+}

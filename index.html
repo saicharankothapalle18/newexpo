@@ -1,0 +1,46 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/shield-alert.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EmIntel | Emergency Intelligence & Incident Coordination System</title>
+  <meta name="description"
+    content="Mission-critical emergency call center platform for multi-source report ingestion, spatiotemporal duplicate correlation, human verification, and responder dispatch." />
+  <!-- Google Fonts Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <!-- Tailwind CSS CDN & Light Sky Shining Theme Config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            sky30: 'rgba(56, 189, 248, 0.30)',
+            sky15: 'rgba(56, 189, 248, 0.15)',
+            skyLight: '#f0f9ff'
+          },
+          boxShadow: {
+            'sky-glow': '0 0 20px rgba(56, 189, 248, 0.30)',
+            'sky-shine': '0 0 30px rgba(56, 189, 248, 0.35), 0 4px 15px rgba(56, 189, 248, 0.20)'
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Leaflet Map CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+</head>
+
+<body class="bg-white text-slate-800 selection:bg-sky-400/30 selection:text-sky-900 antialiased">
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
+</html>
